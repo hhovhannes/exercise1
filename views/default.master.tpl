@@ -161,6 +161,7 @@
                                 {/if}
                                 <div class="Frame-row">
                                     <main class="Content MainContent">
+{*                                        added the below section*}
                                         {if inSection("DiscussionList")}
                                             {module name="PromotedContentModule" Limit="3" Group="3"}
                                         {/if}

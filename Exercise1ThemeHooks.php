@@ -34,7 +34,7 @@ class Exercise1ThemeHooks extends \Gdn_Plugin {
 
     }
 
-
+//the function which will handle commentCount and discussionCount, in a new themehook
     /**
      * Adds commentsCount and discussionsCount to Meta in discussion section
      *
