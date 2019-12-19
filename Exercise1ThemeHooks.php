@@ -19,8 +19,23 @@ class Exercise1ThemeHooks extends \Gdn_Plugin {
         // Bail out if we're in the dashboard
         if (inSection('Dashboard')) {
             return;
-
         }
+
+    }
+
+    //section where I override the configs
+
+    public function setup() {
+        $this->structure();
+    }
+
+    public function structure() {
+        saveToConfig([
+            'Vanilla.Categories.Layout' => 'table',
+            'Vanilla.Discussions.Layout' => 'table',
+        ]);
+
+        return true;
     }
 
 
@@ -34,7 +49,7 @@ class Exercise1ThemeHooks extends \Gdn_Plugin {
 
     }
 
-//the function which will handle commentCount and discussionCount, in a new themehook
+    //the function which will handle commentCount and discussionCount, in a new themehook
     /**
      * Adds commentsCount and discussionsCount to Meta in discussion section
      *
@@ -46,6 +61,8 @@ class Exercise1ThemeHooks extends \Gdn_Plugin {
         echo '<span class="MItem comments-discussions-number">' . $sender->Data["Category"]["CountDiscussions"] . ' discussions</span>';
 
     }
+
+
 
 
 
