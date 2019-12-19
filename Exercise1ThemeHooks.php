@@ -62,6 +62,23 @@ class Exercise1ThemeHooks extends \Gdn_Plugin {
 
     }
 
+    /**
+     * Add link to drafts page to me module flyout menu.
+     *
+     * @param MeModule $sender The MeModule
+     * @param array $args Potential arguments
+     *
+     * @return void
+     */
+    public function meModule_flyoutMenu_handler($sender, $args) {
+        if (!val('Dropdown', $args, false)) {
+            return;
+        }
+        /** @var DropdownModule $dropdown */
+        $dropdown = $args['Dropdown'];
+        $dropdown->addLink(t('My Drafts'), '/drafts', 'profile.drafts', '', [], ['listItemCssClasses' => ['link-drafts']]);
+    }
+
 
 
 
