@@ -149,9 +149,13 @@
                     {else}
                         {if {homepage_title} !== ""}
                             <h2 class="H HomepageTitle">{homepage_title}</h2>
+                        {else}
+                            <h2 class="H HomepageTitle">{$Title}</h2>
                         {/if}
                         {if $_Description}
                             <p class="P PageDescription">{$_Description}</p>
+                        {else}
+                            <p class="P PageDescription">{$Description}</p>
                         {/if}
                 {/if}
             {/if}

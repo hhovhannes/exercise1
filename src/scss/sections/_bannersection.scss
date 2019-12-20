@@ -2,6 +2,11 @@
     display:none;
 }
 
+//in case the hero plugin is deactivated
+.Frame-top > .HomepageTitle {
+    margin:20px;
+}
+
 
 .MyHero {
     width: 100%;
@@ -16,3 +21,8 @@
         color:whitesmoke;
     }
 }
+
+.myCustomHomePageTitle {
+    @extend .HomepageTitle;
+}
+
