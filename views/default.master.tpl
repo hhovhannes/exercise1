@@ -134,7 +134,7 @@
                     </header>
                 </div>
             {/if}
-            //if we have
+{*            if we have $heroImageUrl it means it has been set in themehooks, so the plugin is enabled*}
             {if ($heroImageUrl)}
                 {if inSection("DiscussionList") || inSection("CategoryList")}
                     <div class="MyHero" style="background-image: url('{$heroImageUrl}')">
