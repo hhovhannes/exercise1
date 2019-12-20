@@ -17,3 +17,17 @@
 /* --------------- Discussion page --------------- */
 
 @import "pages/_discussion.scss";
+
+
+/* --------------- Banner control --------------- */
+
+@import "sections/_bannersection.scss";
+
+@media screen and (max-width: 768px) {
+    .Frame-content .HomepageTitle {
+        display:block;
+    }
+    .MyHero  {
+        display:none;
+    }
+}

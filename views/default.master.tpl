@@ -134,6 +134,11 @@
                     </header>
                 </div>
             {/if}
+            <div class="MyHero" style="background-image: url('{hero_image_link}')">
+                <h1>{$Title}</h1>
+                <p>{$Description}</p>
+
+            </div>
             <div class="Frame-body">
                 <div class="Frame-content">
                     <div class="Container">
@@ -161,6 +166,7 @@
                                 {/if}
                                 <div class="Frame-row">
                                     <main class="Content MainContent">
+
 {*                                        added the below section*}
                                         {if inSection("DiscussionList")}
                                             {module name="PromotedContentModule" Limit="3" Group="3"}
