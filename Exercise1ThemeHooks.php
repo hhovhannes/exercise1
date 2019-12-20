@@ -21,6 +21,12 @@ class Exercise1ThemeHooks extends \Gdn_Plugin {
             return;
         }
 
+        // Set Data "heroImageUrl" to smarty
+        if (class_exists('HeroImagePlugin')) {
+            $imageUrl = \HeroImagePlugin::getCurrentHeroImageLink();
+           $sender->setData('heroImageUrl', $imageUrl);
+        }
+
     }
 
     //section where I override the configs
@@ -78,6 +84,7 @@ class Exercise1ThemeHooks extends \Gdn_Plugin {
         $dropdown = $args['Dropdown'];
         $dropdown->addLink(t('My Drafts'), '/drafts', 'profile.drafts', '', [], ['listItemCssClasses' => ['link-drafts']]);
     }
+
 
 
 

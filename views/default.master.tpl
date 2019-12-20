@@ -134,12 +134,26 @@
                     </header>
                 </div>
             {/if}
-
-            {if inSection("DiscussionList") || inSection("CategoryList")}
-                <div class="MyHero" style="background-image: url('{hero_image_link}')">
-                    <h1>{$Title}</h1>
-                    <p>{$Description}</p>
-                </div>
+            //if we have
+            {if ($heroImageUrl)}
+                {if inSection("DiscussionList") || inSection("CategoryList")}
+                    <div class="MyHero" style="background-image: url('{$heroImageUrl}')">
+                        <h1>{$Title}</h1>
+                        <p>{$Description}</p>
+                    </div>
+                {/if}
+                {else}
+                    {if $Category}
+                        <h2 class="H HomepageTitle">{$Category.Name}{follow_button}</h2>
+                        <p class="P PageDescription">{$Category.Description}</p>
+                    {else}
+                        {if {homepage_title} !== ""}
+                            <h2 class="H HomepageTitle">{homepage_title}</h2>
+                        {/if}
+                        {if $_Description}
+                            <p class="P PageDescription">{$_Description}</p>
+                        {/if}
+                {/if}
             {/if}
 
             <div class="Frame-body">
