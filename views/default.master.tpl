@@ -141,23 +141,33 @@
                         <h1>{$Title}</h1>
                         <p>{$Description}</p>
                     </div>
+                    <div class="bannerImgReplacer" >
+                        <div class="Container">
+                            <h1>{$Title}</h1>
+                            <p>{$Description}</p>
+                        </div>
+                    </div>
                 {/if}
-{*                {else}*}
-{*                    {if $Category}*}
-{*                        <h2 class="H HomepageTitle">{$Category.Name}{follow_button}</h2>*}
-{*                        <p class="P PageDescription">{$Category.Description}</p>*}
-{*                    {else}*}
-{*                        {if {homepage_title} !== ""}*}
-{*                            <h2 class="H HomepageTitle">{homepage_title}</h2>*}
-{*                        {else}*}
-{*                            <h2 class="H HomepageTitle">{$Title}</h2>*}
-{*                        {/if}*}
-{*                        {if $_Description}*}
-{*                            <p class="P PageDescription">{$_Description}</p>*}
-{*                        {else}*}
-{*                            <p class="P PageDescription">{$Description}</p>*}
-{*                        {/if}*}
-{*                {/if}*}
+                {else}
+                    {if $Category}
+                        <h2 class="H HomepageTitle">{$Category.Name}{follow_button}</h2>
+                        <p class="P PageDescription">{$Category.Description}</p>
+                    {else}
+                        {if {homepage_title} !== ""}
+                            <div class="Container">
+                                <h2 class="H HomepageTitle ">{homepage_title}</h2>
+                            </div>
+                        {else}
+                        <div class="Container">
+                                <h2 class="H HomepageTitle ">{$Title}</h2>
+                        </div>
+                        {/if}
+                        {if $_Description}
+                            <p class="P PageDescription">{$_Description}</p>
+                        {else}
+                            <p class="P PageDescription">{$Description}</p>
+                        {/if}
+                {/if}
             {/if}
 
             <div class="Frame-body">

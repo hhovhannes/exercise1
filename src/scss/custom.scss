@@ -16,17 +16,19 @@
 
 /* --------------- Discussion page --------------- */
 
-@import "pages/_discussion.scss";
+@import "pages/_discussion";
 
 
 /* --------------- Banner control --------------- */
 
-@import "sections/_bannersection.scss";
+@import "sections/_bannersection";
 
 @media screen and (max-width: 768px) {
-    .Frame-content .HomepageTitle {
+    div.Frame-top > div.bannerImgReplacer {
         display:block;
+        margin-top:20px;
     }
+
     .MyHero  {
         display:none;
     }

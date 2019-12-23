@@ -2,9 +2,13 @@
     display:none;
 }
 
+div.Frame-top > div.bannerImgReplacer {
+    display:none;
+}
+
 //in case the hero plugin is deactivated
-.Frame-top > .HomepageTitle {
-    margin:20px;
+.Frame-top  .HomepageTitle {
+    margin-top:10px;
 }
 
 
