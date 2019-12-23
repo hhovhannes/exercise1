@@ -20,13 +20,6 @@ class Exercise1ThemeHooks extends \Gdn_Plugin {
         if (inSection('Dashboard')) {
             return;
         }
-
-        // Set Data "heroImageUrl" to smarty
-        if (class_exists('HeroImagePlugin')) {
-            $imageUrl = \HeroImagePlugin::getCurrentHeroImageLink();
-           $sender->setData('heroImageUrl', $imageUrl);
-        }
-
     }
 
     //section where I override the configs

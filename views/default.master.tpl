@@ -135,29 +135,29 @@
                 </div>
             {/if}
 {*            if we have $heroImageUrl it means it has been set in themehooks, so the plugin is enabled*}
-            {if ($heroImageUrl)}
+            {if {banner_image_url}}
                 {if inSection("DiscussionList") || inSection("CategoryList")}
-                    <div class="MyHero" style="background-image: url('{$heroImageUrl}')">
+                    <div class="MyHero Herobanner-bgImage" style="background-image: url('{banner_image_url}')">
                         <h1>{$Title}</h1>
                         <p>{$Description}</p>
                     </div>
                 {/if}
-                {else}
-                    {if $Category}
-                        <h2 class="H HomepageTitle">{$Category.Name}{follow_button}</h2>
-                        <p class="P PageDescription">{$Category.Description}</p>
-                    {else}
-                        {if {homepage_title} !== ""}
-                            <h2 class="H HomepageTitle">{homepage_title}</h2>
-                        {else}
-                            <h2 class="H HomepageTitle">{$Title}</h2>
-                        {/if}
-                        {if $_Description}
-                            <p class="P PageDescription">{$_Description}</p>
-                        {else}
-                            <p class="P PageDescription">{$Description}</p>
-                        {/if}
-                {/if}
+{*                {else}*}
+{*                    {if $Category}*}
+{*                        <h2 class="H HomepageTitle">{$Category.Name}{follow_button}</h2>*}
+{*                        <p class="P PageDescription">{$Category.Description}</p>*}
+{*                    {else}*}
+{*                        {if {homepage_title} !== ""}*}
+{*                            <h2 class="H HomepageTitle">{homepage_title}</h2>*}
+{*                        {else}*}
+{*                            <h2 class="H HomepageTitle">{$Title}</h2>*}
+{*                        {/if}*}
+{*                        {if $_Description}*}
+{*                            <p class="P PageDescription">{$_Description}</p>*}
+{*                        {else}*}
+{*                            <p class="P PageDescription">{$Description}</p>*}
+{*                        {/if}*}
+{*                {/if}*}
             {/if}
 
             <div class="Frame-body">
