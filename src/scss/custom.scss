@@ -16,12 +16,12 @@
 
 /* --------------- Discussion page --------------- */
 
-@import "pages/_discussion";
+@import "pages/discussion";
 
 
 /* --------------- Banner control --------------- */
 
-@import "sections/_bannersection";
+@import "sections/bannersection";
 
 @media screen and (max-width: 768px) {
     div.Frame-top > div.bannerImgReplacer {
@@ -33,3 +33,7 @@
         display:none;
     }
 }
+
+/* --------------- MeBox Icons --------------- */
+
+@import "components/mebox";

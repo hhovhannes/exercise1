@@ -1,0 +1,66 @@
+
+@font-face {
+    font-family: "IcoFont";
+    font-weight: normal;
+    font-style: "Regular";
+    src: url("./../src/scss/fonts/icofont/icofont.woff2") format("woff2"),
+    url("./../src/scss/fonts/icofont/icofont.woff") format("woff");
+}
+
+@mixin icofont() {
+    display: inline-block;
+    min-width: 1em;
+    font-family: Icofont;
+    font-variant: normal;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    line-height: inherit;
+    color: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+$icofont-notification: "\efac";
+$icofont-notification-empty: "\eacf";
+$icofont-inbox-empty: "\ef4c";
+$icofont-inbox: "\ec67";
+$icofont-bookmark-empty: "\e820";
+$icofont-bookmark: "\f000";
+
+
+.SpNotifications,
+.SpInbox,
+.SpBookmarks {
+
+    &::before {
+        @include icofont();
+    }
+}
+
+.SpNotifications::before {
+    content: $icofont-notification-empty;
+}
+
+.SpInbox::before {
+    content: $icofont-inbox-empty;
+}
+
+.SpBookmarks::before {
+    content: $icofont-bookmark-empty;
+}
+
+.Open {
+
+    .SpNotifications::before {
+        content: $icofont-notification;
+    }
+    .SpInbox::before {
+        content: $icofont-inbox;
+    }
+    .SpBookmarks::before {
+        content: $icofont-bookmark;
+    }
+}
+
